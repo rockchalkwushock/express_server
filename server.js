@@ -9,3 +9,15 @@ var express = require('express');
 var app = express();
 // Represents the port server will run on.
 var port = 3000;
+
+app.get('/', function(request, response) {
+    response.send("Hello World");
+});
+
+app.listen(port, function(err, response) {
+  if (err) {
+    console.log('server error');
+  } else {
+    console.log('server running on port: ' + port + '.');
+  }
+});
